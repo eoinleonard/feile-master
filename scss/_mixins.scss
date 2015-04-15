@@ -1,0 +1,96 @@
+@mixin border-box () {
+	*, *:before, *:after {
+	  -moz-box-sizing:    border-box; 
+   -webkit-box-sizing: border-box;  
+    box-sizing:        border-box;  
+	}
+}
+
+// = Clearfix
+// -----------------------------
+@mixin cf() {
+  *zoom: 1;
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear:both;
+  }
+}
+
+// = Inline block
+// -----------------------------
+
+@mixin inline-block() {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  *display: inline;
+}
+
+// Hide from both screenreaders and browsers: h5bp.com/u
+@mixin hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+// Hide only visually, but have it available for screenreaders: h5bp.com/v
+@mixin visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+// Media queries
+
+@mixin mq($break) {
+  @if $break == "small" {
+    @media (min-width: $brkpoint-zero) and (max-width: $brkpoint-s-md) {
+      @content;
+    }
+  }
+  @else if $break == "s-md" {
+    @media (min-width: $brkpoint-s + 1) {
+      @content;
+    }
+  }
+   @else if $break == "md" {
+    @media (min-width: $brkpoint-s-md + 1) {
+      @content;
+    }
+  }
+   @else if $break == "big" {
+    @media (min-width: $brkpoint-md + 1) {
+      @content;
+    }
+  }
+   @else if $break == "large" {
+    @media (min-width: $brkpoint-big + 1) {
+      @content;
+    }
+  }
+
+    @else if $break == "up-to" {
+    @media (max-width: $brkpoint-s - 1) {
+      @content;
+    }
+  }
+
+   @else {
+   	@error "Whoops! No value could be retrieved for `#{$break}`. "
+  }
+}
+
+
+
+
+
+
+

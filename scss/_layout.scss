@@ -1,0 +1,128 @@
+html {
+	@include border-box();
+}
+.container {
+	width: 100%;
+	max-width: 1100px;
+	margin: auto;
+		@include mq(md) {
+			padding: 0 30px;
+		}
+	
+}
+
+.header-main {
+	@include cf();
+	position: relative;
+	background-color: $color-body-bg;
+	padding: 16px 0;
+	border-bottom: 1px solid #424242;
+	.container {
+		padding: 0 20px;
+		@include cf();
+	}
+	h1 {
+		max-width: 196px;
+		width: 100%;
+		margin: 4px 30px 18px 0;
+		@include mq(s-md){
+			float: left;
+			width: 230px;
+			margin-bottom: 0;
+		}
+
+	}
+	.contact {
+		@include mq(s-md){
+			float: right;
+			width: 237px;
+		
+		}
+	}
+	.opening {
+		position: absolute;
+		top: 15px;
+		right: 20px;
+
+		@include mq(s-md){
+			position: static;
+			float: left;
+			margin: 0;
+		}
+	}
+	
+	.telephone {
+		display: block;
+		@include mq(s-md){
+			float: right;
+			font-size: 28px;
+			background-color: transparent;
+			color: #568e3f;
+			cursor: default;
+		}
+		@include mq(up-to) {
+			&:hover {
+				background-color: darken($emerald, 5%);
+			}
+			&:active {
+				background-color: lighten($emerald, 3%);
+			}
+		}
+	}
+
+}
+.hero {
+	.container {
+		padding: 0 20px;
+	}
+	.left, .right {
+	width: 100%;
+	
+}
+.left {
+	@include mq(md) {
+		width: 56%;
+		float: left;
+	}
+}
+.right {
+	@include mq(md) {
+		width: 42%;
+		float: left;
+	}
+}
+}
+
+
+.pack {
+	@include cf();
+	.pack-contents {
+		padding: 20px;
+		@include mq(md){
+		padding: 30px;
+	}
+.left, .right {
+	width: 100%;
+	
+}
+.left {
+	@include mq(md) {
+		width: 48%;
+		float: left;
+	}
+}
+.right {
+	@include mq(md) {
+		width: 48%;
+		float: left;
+		margin-left: 4%;
+	}
+}
+	}
+}
+
+
+
+
+
+

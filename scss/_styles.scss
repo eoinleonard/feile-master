@@ -1,0 +1,588 @@
+img {
+	max-width: 100%;
+}
+
+body {
+	background-color: $color-body-bg;
+	font-family: $font-family--primary;
+	letter-spacing: -0.049em;
+}
+
+b {
+	font-weight: bold;
+}
+
+a {
+	text-decoration: none;
+}
+sup {
+	font-size: 0.7em;
+}
+
+.hero {
+	@include cf();
+	padding-top: 20px;
+	background-image: url("../img/hero-background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin-bottom: 0;
+	margin-top: -4px;
+	@include mq(md) {
+		min-height: 366px;
+	}
+	@include mq(large){
+			min-height: auto;
+			padding-top: 60px;
+			
+		}
+	.left {
+		margin-left: 12px;
+
+	}
+
+		
+	h2 {
+		color: white;
+		font-weight: bold;
+		font-size: 34px;
+		background: $brand-dark;
+		line-height: 1.42;
+		display: inline;
+		box-shadow: 12px 0 0 $brand-dark, -12px 0 0 $brand-dark;
+
+			@include mq(s-md){
+				font-size: 42px;
+				line-height: 1.5;
+			}
+			@include mq(large){
+				line-height: 1.2;
+				font-size: 53px;
+			}
+			
+
+		span {
+			text-transform: uppercase;
+			color: $pink;
+			font-size: 44px;
+			@include mq(s-md){
+				font-size: 53px;
+				
+			}
+			@include mq(large){
+				font-size: 77px;
+				margin-bottom: -12px;
+
+			}
+		}
+	}
+	p {
+		background-color: #dcddde;
+		color: #3a3a3a;
+		padding: 4px 10px 10px 14px;
+		margin-left: -12px;
+		margin-top: 19px;
+		margin-right: 12px;
+		margin-bottom: 20px;
+		max-width: 400px;
+		font-weight: bold;
+		line-height: 1.6;
+		@include mq(s-md){
+			margin-bottom: 50px;
+		}
+		@include mq(md){
+			margin-bottom: 100px;
+		}
+	}
+	img {
+		position: relative;
+		float: right;
+		width: 70%;
+		z-index: 2;
+		@include mq(md){
+			width: 100%;
+			max-width: 460px;
+		}
+		@include mq(large){
+			
+			margin-top: -40px;
+			
+		}
+		
+	}
+}
+.telephone {
+	background-color: $emerald;
+	padding: 5px 16px;
+	font-weight: bold;
+	color: white;
+	font-size: 28px;
+	letter-spacing: default;
+	text-align: center;
+	position: relative;
+	&:before {
+				content: "";
+				width: 25px;
+				height: 26px;
+				background: url(../img/phone-icon.png);
+				position: absolute;
+				left: 30px;
+				top: 11px;
+			}
+	@include mq(s-md){
+			padding: 0;
+			&:before {
+				content: "";
+				
+				background: none;
+				
+			}
+		
+		}
+}
+
+.opening {
+	font-size: 14px;
+	line-height: 18px;
+	color: $grey;
+	margin-right: 20px;
+	margin-top: -4px;
+}
+
+.order-by {
+	@include cf();
+	background-color: #221a42;
+	margin-top: -10px;
+	margin-bottom: 20px;
+	color: white;
+	padding: 10px 0;
+
+	@include mq(s-md){
+			margin-bottom: 30px;
+		
+		}
+		@include mq(large){
+			margin-bottom: 0px;
+		
+		}
+		@include mq(large){
+			position: relative;
+			top: -50px;
+			z-index: 0;
+		
+		}
+		.container {
+			padding: 0 20px;
+		}
+		.event {
+			img {
+				width: 50px;
+				float: left;
+				margin-right: 12px;
+				@include mq(md){
+					width: 80px;
+					margin-top: -40px;
+					margin-right: 24px;
+				}
+			}
+			p {
+				float: left;
+				width: 100px;
+				margin-top: 12px;
+				font-weight: bold;
+				font-size: 14px;
+				@include mq(md){
+					font-size: 18px;
+					width: 140px;
+					line-height: 23px;
+				}
+				span {
+					font-size: 18px;
+					@include mq(md){
+					font-size: 28px;
+					
+				}
+				}
+			}
+			width: 50%;
+			float: left;
+			@include mq(md){
+					width: 260px;
+		
+				}
+		}
+
+}
+
+.pack {
+	background-color: $white;
+	padding-bottom: 12px;
+	.pack-header h3{
+		background-color: $brand-dark;
+		color: white;
+		padding: 0 0 10px 20px;
+		font-weight: bold;
+		font-size: 22px;
+		span {
+			font-size: 32px;
+			background-color: lighten($brand-dark, 30%);
+			padding: 4px 21px 7px 19px;
+			position: relative;
+			top: 4px;
+			left: 5px;
+		}
+	}
+}
+.large-item {
+	width: 56%;
+	float: left;
+	margin-right: 4%;
+	margin-bottom: 16px;
+}
+.small-items {
+	width: 36%;
+	float: left;
+	margin-left: 4%;
+
+}
+.add-logos {
+	margin-bottom: 20px;
+	p {
+		color: $grey;
+	}
+}
+.details {
+	font-size: 14px;
+	padding-bottom: 6px;
+	b {
+		font-size: 16px;
+	}
+	li {
+		margin-bottom: 8px;
+	}
+}
+
+img.color-wheel {
+	width: 38%;
+	float: left;
+	margin: 0 12px 0 -4px;
+	max-width: 173px;
+
+}
+.pricing {
+	padding-bottom: 12px;
+	margin-bottom: 35px;
+
+	ul {
+		font-weight: bold;
+		color: #4c4c4c;
+		margin-bottom: 12px;
+		padding: 16px 0 0 0;
+		@include mq (s-md){
+			
+
+		}
+		li {
+			display: block;
+			font-size: 18px;
+			margin-bottom: 3px;
+			@include mq (large){
+			padding-bottom: 12px;
+			font-size: 24px;
+		}
+			span {
+				float: right;
+				color: $emerald;
+				font-size: 20px;
+					@include mq (large){
+		
+			font-size: 24px;
+		}
+			}
+		}
+	}
+.vat {
+	font-size: 14px;
+	color: $grey;
+	margin-bottom: 3px;
+}
+	
+}
+.cta {
+	@include cf();
+	width: 100%;
+	@include mq(s-md){
+		
+		float: right;
+		
+		}
+	h4 {
+		display: block;
+		font-size: 14px;
+		margin: 0 0 12px 0;
+		width: 100%;
+		@include mq(s-md){
+		width: 40%;
+		float: left;
+		font-size: 18px;
+		margin-top: 14px;
+		}
+		@include mq(md){
+		float: none;
+		width: 100%;
+		margin-top: 0;
+		}
+		@include mq(large){
+		width: 42%;
+		float: left;
+		font-size: 16px;
+		margin-top: 14px;
+		}
+	}
+	p {
+		display: block;
+		width: 100%;
+		float: none;
+
+		@include mq(s-md){
+		width: 55%;
+		float: right;
+	}
+		@include mq(md){
+		float: none;
+		width: 100%
+		
+		}
+		@include mq(large){
+		width: 55%;
+		float: right;
+		
+		
+		}
+		
+		a {
+		display: block;
+		color: white;
+		font-size: 24px;
+		background-color: $emerald;
+		padding: 16px 22px;
+		text-align: center;
+		font-weight: bold;
+		letter-spacing: 0.025em;
+		position: relative;
+				&:before {
+				content: "";
+				width: 25px;
+				height: 26px;
+				background: url(../img/phone-icon.png);
+				position: absolute;
+				left: 30px;
+				top: 19px;
+			}
+		
+		@include mq(s-md){
+		background-color: $brand-red;
+		cursor: default;
+		&:before {
+				content: "";
+				
+				background: none;
+				
+			}
+		
+		}
+			@include mq(up-to) {
+			&:hover {
+				background-color: darken($emerald, 5%);
+			}
+			&:active {
+				background-color: lighten($emerald, 3%);
+			}
+		}
+
+
+	}
+}
+}
+
+.testimonials {
+	@include cf();
+	margin: 20px 0;
+	@include mq(s-md) {
+
+	}
+	&.container {
+		padding: 0 20px;
+	}
+	h3 {
+		font-weight: bold;
+		font-size: 26px;
+		color: #232323;
+		margin-bottom: 12px;
+	}
+	blockquote {
+		margin-bottom: 20px;
+		font-weight: 400;
+		
+		
+		footer {
+			text-align: right;
+			background: url("../img/quotes.png");
+			background-repeat: no-repeat;
+			background-size: contain;
+
+		}
+		cite {
+			font-weight: bold;
+			color: lighten($brand-dark, 20%);
+
+		}
+	}
+	p {
+		font-style: italic;
+		color: #7a7a7a;
+		font-size: 18px;
+		line-height: 30px;
+		margin-bottom: 14px;
+	}
+	cite {
+		font-weight: italic;
+	}
+	.half {
+		@include mq(s-md) {
+			width: 50%;
+			float: left;
+			&:first-of-type {
+				border-right: 1px solid #ddd;
+				padding-right: 5%;
+			}
+			&:last-of-type {
+				padding-left: 5%;
+				
+			}
+			
+		}
+	}
+
+}
+
+.main-footer {
+	@include cf();
+	color: white;
+	background-color: $brand-dark;
+	padding: 20px 0;
+	section {
+		@include cf();
+	}
+	.container {
+		padding: 0 20px;
+	}
+	img {
+		width: 200px;
+		margin-bottom: 30px;
+		@include mq(s-md) {
+			
+			@include inline-block();
+		}
+		@include mq(md) {
+			float: left;
+		}
+
+	}
+	small {
+		@include cf();
+		font-weight: 400;
+		font-style: italic;
+		color: $grey;
+		font-size: 14px;
+	}
+	p {
+		font-weight: bold;
+		@include mq(s-md) {
+			padding-left: 30px;
+			
+		}
+		@include mq(md) {
+			float: right;
+		}
+		em {
+			display: block;
+			font-size: 20px;
+			font-style: italic;
+			margin-bottom: 20px;
+			@include mq(s-md) {
+				@include inline-block();
+				position: relative;
+				&:before {
+				content: "";
+				width: 25px;
+				height: 26px;
+				background: url(../img/phone-icon.png);
+				position: absolute;
+				left: -38px;
+				top: 0px;
+			}
+			}
+		}
+		a {
+			color: white;
+			padding: 16px 24px;
+			font-size: 28px;
+			display: block;
+			text-align: center;
+			background-color: $brand-red;
+			margin-top: 6px;
+			font-style: normal;
+			position: relative;
+			letter-spacing: 0.025em;
+			&:before {
+				content: "";
+				width: 25px;
+				height: 26px;
+				background: url(../img/phone-icon.png);
+				position: absolute;
+				left: 21px;
+				top: 23px;
+			}
+			@include mq(s-md) {
+				@include inline-block();
+				background-color: transparent;
+				color: $brand-red;
+				padding: 0;
+				margin: -9px 0 0 30px;
+				font-size: 34px;
+				cursor: default;
+				&:before {
+				content: "";
+				background: none;
+				
+			}
+			}
+				@include mq(up-to) {
+			&:hover {
+				background-color: darken($brand-red, 5%);
+			}
+			&:active {
+				background-color: lighten($brand-red, 3%);
+			}
+		}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
